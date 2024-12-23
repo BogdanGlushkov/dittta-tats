@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Manrope", serif;
+    color: white;
+    background-color: black;
+}
+
+:root {
+    /* --accent-color: #fff; */
+    --dark-color: #131213;
+    --black-color: #000;
+    --white-color: #fff;
+    --margin-top-default: 200px;
+    --margin-top-mobile: 100px;
+}
+
+/*  */
+
+.container {
+    max-width: 1512px;
+    padding: 0 106px;
+    margin: 0 auto;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -115px;
+}
+
+.background-header {
+    position: relative;
+    /* Чтобы правильно позиционировать псевдоэлемент */
+    min-height: 100vh;
+    background: none;
+    /* Убираем фон из основного блока */
+    overflow: hidden;
+    /* Чтобы псевдоэлемент не выходил за границы */
+}
+
+.background-header::before {
+    content: "";
+    /* Псевдоэлемент */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/backMain.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(15px) grayscale(100%);
+    -webkit-filter: blur(15px) grayscale(100%);
+    z-index: -1;
+    /* Отправляем фон назад */
+    opacity: 0.35;
+}
+
+.header ul {
+    padding-top: 73px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-text {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.header li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    min-width: 122px;
+}
+
+.green_btn {
+    padding-top: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #24B66C;
+    animation: blink 1.2s steps(20, start) infinite;
+}
+
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+.centered__main_text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 487px;
+}
+
+.centered__main_text h1 {
+margin-bottom: 24px;
+}
+
+h1 {
+    line-height: 35px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: 400;    
+}
+
+span {
+    opacity: 0.5;
+}
+
+hr {
+    width: 100%;
+    opacity: 20%;
+}
+
+
+/*  */
+
+.about_me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--margin-top-default);
+    text-align: center;
+}
+
+.about_me h4 {
+    margin-bottom: 73px;
+}
+
+.about_me h1 {
+    max-width: 491px;
+}
+
+.thought_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--margin-top-default);
+}
+
+.arr_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thought_header .arr_wrapper {
+    margin-bottom: 24px;
+}
+
+.thought_header h3 {
+    max-width: 486px;
+}
+
+.photo_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: var(--margin-top-default);
+}
+
+.photo_layer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.photo_layer img {
+    width: 100%;
+}
+
+.watch_photo {
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+}
+
+.reviews_header {
+    margin-top: var(--margin-top-default);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews_header h3 {
+    margin-top: 30px;
+    max-width: 366px;
+    text-align: center;
+}
+
+.reviews_wrapper {
+    margin-top: var(--margin-top-default);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.reviews_msg {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.reviews_msg h5 {
+    margin-top: 60px;
+}
+
+
+.reviews_msg h6{
+    margin-top: 4px;
+}
+
+
+.booking_header {
+    margin-top: var(--margin-top-default);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking_header h3 {
+    margin-top: 30px;
+    max-width: 388px;
+    text-align: center;
+}
+
+.contacts {
+    margin: var(--margin-top-default) auto;
+}
+.contact_link p{
+    margin-top: 30px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.contact_link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    flex-direction: column;
+}
+
+.contacts_wrapper hr {
+    color: #D9D9D9;
+}
+
+.footer_top {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_top span {
+    opacity: 70%;
+}
+
+.footer_top ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+.logo_footer {
+    margin-right: 99px;
+}
+
+.footer_bottom {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_bottom p {
+    font-size: 12px;
+    opacity: 60%;
+}
+
+.footer_bottom a {
+    color: #fff;
+    opacity: 1;
+    font-size: 12px;
+}
+
+.text_cryonix {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
