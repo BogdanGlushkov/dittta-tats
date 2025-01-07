@@ -1,43 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DITTTA</title>
+    <!-- add favicon -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./js/jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="./js/jquery-ui/jquery-ui.theme.min.css">
+    <meta name="description" content="Тату-мастер Пермь Дмитрий">
 
     <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
- 
-    ym(99299946, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true,
-         webvisor:true
-    });
- </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/99299946" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
- <!-- /Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(99299946, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/99299946" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
+
 <body>
     <div class="background-header">
+        <div class="overlay"></div>
         <header>
             <div class="container">
                 <div class="header">
                     <ul>
-                        <li><h6>меню</h6></li>
+                        <li id="menu_btn">
+                            <h6>меню</h6>
+                        </li>
+                        <div class="menu">
+                            <ul>
+                                <li>
+                                    <span>
+                                    <div class="arr_wrapper">
+                                        <h4>Меню</h4>
+                                        <img src="../img/corner-right-down.svg" alt="Стрелка вниз">
+                                    </div>
+                                </span>
+                                </li>
+                                <li id="Портфолио_кнопка">
+                                    <h1>Портфолио</h1>
+                                </li>
+                                <li id="Отзывы_кнопка">
+                                    <h1>Отзывы</h1>
+                                </li>
+                                <li id="Контакты_кнопка">
+                                    <h1>Контакты</h1>
+                                </li>
+                                <li id="Запись_кнопка">
+                                    <h1>Запись</h1>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="logo">
                             <img src="../img/Dittta.svg" alt="логотип Дима">
                         </div>
-                        <li><div class="green_btn"></div><h6>запись открыта</h6></li>
+                        <li id="Запись_открыта_кнопка">
+                            <div class="green_btn"></div>
+                            <h6>запись открыта</h6>
+                        </li>
                     </ul>
 
                 </div>
@@ -46,7 +87,9 @@
         <div class="container-header">
             <div class="centered__main_text">
                 <h1>Искусство на грани реальности и фантазии</h1>
-                <h6><span>Татуировка — это уникальная абстракция, созданная для тех, кто ищет не просто рисунок на коже, а выражение своей индивидуальности. Смелые линии, нестандартные формы и глубокий смысл — вот что делает работы мастера поистине исключительными</span></h6>
+                <h6><span>Татуировка — это уникальная абстракция, созданная для тех, кто ищет не просто рисунок на коже,
+                        а выражение своей индивидуальности. Смелые линии, нестандартные формы и глубокий смысл — вот что
+                        делает работы мастера поистине исключительными</span></h6>
             </div>
         </div>
     </div>
@@ -56,87 +99,108 @@
                 <h4>[Дмитрий — Дьяконов]</h4>
                 <h1>Мое искусство превращает
                     идеи в вечные шедевры</h1>
-                    <img src="../img/dittta_photo.png" alt="Тату-мастер Дмитрий">
+                <img src="../img/dittta_photo.png" alt="Тату-мастер Дмитрий">
             </div>
 
-            <div class="thought_header">
+            <div class="thought_header" id="Портфолио">
                 <div class="arr_wrapper">
                     <h2>Разнообразие мыслей</h2>
                     <img src="../img/corner-right-down.svg" alt="Стрелка вниз">
                 </div>
-                <h3><span>Я сочетаю искусство и мастерство, чтобы создать татуировки, которые вы будете ценить всю жизнь</span></h3>
+                <h3><span>Я сочетаю искусство и мастерство, чтобы создать татуировки, которые вы будете ценить всю
+                        жизнь</span></h3>
             </div>
             <div class="thought">
                 <div class="photo_wrapper">
                     <div class="photo_layer">
-                        <img src="../img/photo_low.png" alt="">
-                        <img src="../img/photo_low.png" alt="">
+                        <div class="photo_shadow"> <img src="../img/photo_low.png" alt="">
+                        </div>
+                        <div class="photo_shadow"> <img src="../img/photo_low.png" alt="">
+                        </div>
                     </div>
                     <div class="photo_layer">
-                        <img src="../img/photo_med.png" alt="">
+                        <div class="photo_shadow"> <img src="../img/photo_med.png" alt="">
+                        </div>
                     </div>
                     <div class="photo_layer">
-                        <img src="../img/photo_low.png" alt="">
-                        <img src="../img/photo_low.png" alt="">
+                        <div class="photo_shadow"> <img src="../img/photo_low.png" alt="">
+                        </div>
+                        <div class="photo_shadow"> <img src="../img/photo_low.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="watch_photo">
                 <div class="arr_wrapper">
                     <img src="../img/corner-down-right.svg" alt="Стрелка вниз">
-                    <h4>Разнообразие мыслей</h4>
+                    <h4><a href="https://vk.com/di.ttta?z=album-211322782_282816376" target="_blank">Разнообразие мыслей</a></h4>
                 </div>
             </div>
-            <div class="reviews_header">
+            <div class="reviews_header" id="Отзывы">
                 <div class="arr_wrapper">
                     <h2>Слово клиентам</h2>
                     <img src="../img/corner-right-down.svg" alt="Стрелка вниз">
-                </div>            
+                </div>
                 <h3><span>Истории о доверии, творчестве и эмоциях, запечатленных на коже</span></h3>
-            </div>    
+            </div>
             <div class="reviews_wrapper">
                 <div class="reviews_msg">
-                    <h4>Я долго искала татуера, который сможет перекрыть мою старую тату, но  поиски были неудачными, т.к. все мастера предлагали просто сделать блек. Однажды случайно наткнулась на Диму и по его работам поняла, что его  стиль и подход точно помогут перекрыть мою старую тату. Сначала пришла  на консультацию, мы всё обсудили, обстановка была комфортная,  договорились о встрече и за один сеанс сделали сию красоту.</h4>
+                    <h4>Я долго искала татуера, который сможет перекрыть мою старую тату, но поиски были неудачными,
+                        т.к. все мастера предлагали просто сделать блек. Однажды случайно наткнулась на Диму и по его
+                        работам поняла, что его стиль и подход точно помогут перекрыть мою старую тату. Сначала пришла
+                        на консультацию, мы всё обсудили, обстановка была комфортная, договорились о встрече и за один
+                        сеанс сделали сию красоту.</h4>
                     <h5>Милена Красотулькина</h5>
                     <div class="reviews_from">
                         <h6>Отзыв из <b>ВК</b></h6>
                     </div>
+                    <div class="reviews_image" style="transform: rotate(-10deg);">
+                        <img src="../img/reviews_img1.png" alt="">
+                    </div>
                 </div>
 
                 <div class="reviews_msg">
-                    <h4>Дима большой молодец, хорошо делает татухи фрихендом, а это отличный вариант для тех, кто (как я) не знает что конкретно хочет набить, но хочет,  чтобы это выглядело красиво.</h4>
+                    <h4>Дима большой молодец, хорошо делает татухи фрихендом, а это отличный вариант для тех, кто (как
+                        я) не знает что конкретно хочет набить, но хочет, чтобы это выглядело красиво.</h4>
                     <h5>Лера Киоши</h5>
                     <div class="reviews_from">
                         <h6>Отзыв из <b>ВК</b></h6>
                     </div>
+                    <div class="reviews_image">
+                        <img src="../img/reviews_img1.png" alt="">
+                    </div>
                 </div>
 
                 <div class="reviews_msg">
-                    <h4>Что вершит судьбу человечества в этом мире? Некое незримое существо или  закон, подобно Длани Господней парящей над миром? По крайне мере истинно то, что Дима делает классные тату.</h4>
+                    <h4>Что вершит судьбу человечества в этом мире? Некое незримое существо или закон, подобно Длани
+                        Господней парящей над миром? По крайне мере истинно то, что Дима делает классные тату.</h4>
                     <h5>Георгий Пятница</h5>
                     <div class="reviews_from">
                         <h6>Отзыв из <b>ВК</b></h6>
                     </div>
+                    <div class="reviews_image" style="transform: rotate(5deg);">
+                        <img src="../img/reviews_img1.png" alt="">
+                    </div>
                 </div>
 
             </div>
-            <div class="booking_header">
+            <div class="booking_header" id="Запись">
                 <div class="arr_wrapper">
                     <h2>Запишитесь на сеанс</h2>
                     <img src="../img/corner-right-down.svg" alt="Стрелка вниз">
-                </div>            
+                </div>
                 <h3><span>Сделайте первый шаг к татуировке, которая расскажет вашу историю</span></h3>
             </div>
             <div class="booking">
                 ...
             </div>
-            <div class="contacts">
+            <div class="contacts" id="Контакты">
                 <div class="contacts_wrapper">
                     <div class="contact_link">
                         <div class="arr_wrapper">
                             <h2>VKontakte</h2>
                             <img src="../img/corner-right-down.svg" alt="Стрелка вниз">
-                        </div>     
+                        </div>
                         <p><a href="https://vk.com/voodoo_di" target="_blank"><span>voodoo_di</span></a></p>
                     </div>
 
@@ -146,7 +210,7 @@
                         <div class="arr_wrapper">
                             <h2>Telegram</h2>
                             <img src="../img/corner-right-down.svg" alt="Стрелка вниз">
-                        </div>     
+                        </div>
                         <p><a href="https://vk.com/voodoo_di" target="_blank"><span>@dittta</span></a></p>
                     </div>
 
@@ -156,10 +220,10 @@
                         <div class="arr_wrapper">
                             <h2>Instagram</h2>
                             <img src="../img/corner-right-down.svg" alt="Стрелка вниз">
-                        </div>     
+                        </div>
                         <p><a href="https://vk.com/voodoo_di" target="_blank"><span>@di.ttta</span></a></p>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </main>
@@ -170,25 +234,44 @@
                     <img src="../img/Dittta.svg" alt="логотип Дима">
                 </div>
                 <ul>
-                    <li><h4><span>портфолио</span></h4></li>
-                    <li><h4><span>отзывы</span></h4></li>
-                    <li><h4><span>запись</span></h4></li>
-                    <li><h4><span>контакты</span></h4></li>                    
+                    <li id="Портфолио_кнопка_футер">
+                        <h4><span>портфолио</span></h4>
+                    </li>
+                    <li id="Отзывы_кнопка_футер">
+                        <h4><span>отзывы</span></h4>
+                    </li>
+                    <li id="Запись_кнопка_футер">
+                        <h4><span>запись</span></h4>
+                    </li>
+                    <li id="Контакты_кнопка_футер">
+                        <h4><span>контакты</span></h4>
+                    </li>
                 </ul>
                 <ul>
-                    <li><p><a href="#"><img src="../img/vk_logo.svg" alt="ссылка на мой вконтакте"></a></p></li>
-                    <li><p><a href="#"><img src="../img/tg_logo.svg" alt="ссылка на мой телеграмм"></a></p></li>
-                    <li><p><a href="#"><img src="../img/inst_logo.svg" alt="ссылка на мой инстаграмм"></a></p></li>
+                    <li>
+                        <p><a href="https://vk.com/di.ttta" target="_blank"><img src="../img/vk_logo.svg" alt="ссылка на мой вконтакте"></a></p>
+                    </li>
+                    <li>
+                        <p><a href="#" target="_blank"><img src="../img/tg_logo.svg" alt="ссылка на мой телеграмм"></a></p>
+                    </li>
+                    <li>
+                        <p><a href="#" target="_blank"><img src="../img/inst_logo.svg" alt="ссылка на мой инстаграмм"></a></p>
+                    </li>
                 </ul>
-            </div> 
+            </div>
             <hr>
             <div class="footer_bottom">
                 <p>© 2024. Все права защищены</p>
-                <p>Создано <a href="">Cryonix</a></p>
+                <div class="arr_wrapper"><p>Создано</p><a href="https://cryonix.tech/" target="_blank"><span>Cryonix</span></a></div>
                 <p>Политика конфиденциальности</p>
-            </div> 
+            </div>
         </div>
     </footer>
-    
+
+
+    <!--  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
